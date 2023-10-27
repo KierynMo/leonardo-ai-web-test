@@ -27,7 +27,7 @@ const WelcomeModal = () => {
     openModal,
   } = modalContext
 
-  const { isOpen, onOpen, onClose } = useDisclosure({ isOpen: openModal })
+  const { isOpen, onClose } = useDisclosure({ isOpen: openModal })
 
   const handleClose = () => {
     setOpenModal(false)
@@ -49,7 +49,7 @@ const WelcomeModal = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='green' mr={3} onClick={onClose}>
+            <Button colorScheme='green' mr={3} onClick={handleClose}>
               Close
             </Button>
           </ModalFooter>

@@ -49,8 +49,8 @@ const JobTitleForm = (props: JobTitleFormProps) => {
             initialValues={{
               jobTitle: jobTitle,
             }}
-            onSubmit={(values) => {
-              setJobTitle({ updatedJobTitle: values.jobTitle, userId: id})
+            onSubmit={({ jobTitle }) => {
+              setJobTitle({ updatedJobTitle: jobTitle, userId: id})
             }}
           >
             {({ handleSubmit }) => (
